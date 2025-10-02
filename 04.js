@@ -28,20 +28,21 @@ class Mahasiswa {
     }
 }
 
-// Membuat objek mahasiswa
-let prod1 = new Mahasiswa("Ahmad", 1234, 70);
-let prod2 = new Mahasiswa("Fajar Hidayahtullah", "202401110010", 85);
 
-// Menampilkan info awal
+let prod1 = new Mahasiswa("Fajar Hidayahtullah", "202401110010", 85);
+let prod2 = new Mahasiswa("Shaula", "202401110040", 85);
+
+
 console.log("=== Data Mahasiswa ===");
 prod1.tampilkanInfo();
 prod2.tampilkanInfo();
 
-// Mengubah nilai
+
 prod1.setNilai(90);
 prod2.setNilai(95);
 
-// Menampilkan info setelah perubahan
+
 console.log("=== Setelah Nilai Diubah ===");
 prod1.tampilkanInfo();
 prod2.tampilkanInfo();
+
