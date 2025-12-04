@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUI Sederhana</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>GUI Sederhana</title>
 </head>
 <body>
-
-    <!-- Judul -->
-    <h1>Halo, Mahasiswa!</h1>
-    <h2>Halo, Mahasiswa!</h2>
-
-    <!-- Teks tebal dan miring -->
-    <p><b>tebal</b> <i>miring</i></p>
-
-    <!-- List bernomor -->
+<h1 id="title">Halo, Mahasiswa!</h1>
+<h2>Halo, Mahasiswa!</h2>
+<b> tebal</b>
+<i> miring</i>
     <ol>
-        <li>satu</li>
-        <li>dua</li>
+      <li>satu</li>
+      <li>dua</li>
     </ol>
+  <table>
+<tr>  <td> 1 </td>  <td> 2 </td></tr>
+<tr>  <td> 3 </td>  <td> 4 </td></tr>  
+  </table>
 
-    <!-- Angka di baris terpisah -->
-    <p>1 2<br>3 4</p>
+<img src='https://avatars.githubusercontent.com/u/13969367?v=4'>
 
-    <!-- Gambar (ganti src dengan file gambarmu nanti) -->
-    <img src="superme_123.jpg" alt="Foto contoh" width="600">
+  <form>
+<input type='text' value='cobaan'>
+<input type='submit' value='kirim'>
+    
+  </form>
 
-    <!-- Tombol dan fungsi JS -->
-    <h1 id="title">Halo, Mahasiswa!</h1>
-    <button onclick="ubahTeks()">Klik Saya</button>
 
-    <script>
-        function ubahTeks() {
-            document.getElementById("title").innerText = "Teks telah berubah!";
-        }
-    </script>
+  
+<button onclick="ubahTeks()">Klik Saya</button>
 
+  
+<script>
+function ubahTeks() {
+document.getElementById("title").innerText = "Teks telah berubah!";
+}
+</script>
 </body>
 </html>
