@@ -6,8 +6,28 @@
     <title>GUI Sederhana</title>
 </head>
 <body>
-    <h1 id="title">Halo, Mahasiswa!</h1>
 
+    <!-- Judul -->
+    <h1>Halo, Mahasiswa!</h1>
+    <h2>Halo, Mahasiswa!</h2>
+
+    <!-- Teks tebal dan miring -->
+    <p><b>tebal</b> <i>miring</i></p>
+
+    <!-- List bernomor -->
+    <ol>
+        <li>satu</li>
+        <li>dua</li>
+    </ol>
+
+    <!-- Angka di baris terpisah -->
+    <p>1 2<br>3 4</p>
+
+    <!-- Gambar (ganti src dengan file gambarmu nanti) -->
+    <img src="superme_123.jpg" alt="Foto contoh" width="600">
+
+    <!-- Tombol dan fungsi JS -->
+    <h1 id="title">Halo, Mahasiswa!</h1>
     <button onclick="ubahTeks()">Klik Saya</button>
 
     <script>
@@ -15,5 +35,6 @@
             document.getElementById("title").innerText = "Teks telah berubah!";
         }
     </script>
+
 </body>
 </html>
