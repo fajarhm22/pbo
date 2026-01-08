@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(90deg, #ff5757, #8c52ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Kotak Login */
+.login-box {
+    width: 350px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* Avatar */
+.login-box img {
+    width: 90px;
+    margin-bottom: 15px;
+}
+
+/* Judul */
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input */
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Button */
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #ff5757, #8c52ff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    opacity: 0.9;
+}
+
+/* Alert Notifikasi */
+.alert {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #ffffff;
+    font-weight: bold;
+    display: none;
+}
+
+.alert.error {
+    color: #ff3b3b;
+    border: 1px solid #ff3b3b;
+}
+
+.alert.success {
+    color: #2ecc71;
+    border: 1px solid #2ecc71;
+}
+
+/* Halaman User */
+.user-info button {
+    background: #ff5757;
+}
