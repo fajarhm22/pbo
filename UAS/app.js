@@ -26,7 +26,7 @@ class LoginApp {
     renderLogin() {
         this.container.innerHTML = `
         <div class="login-box">
-            <img src="avatar.png" alt="Avatar Login">
+            <img src="avatar.jpeg" alt="Avatar Login">
             <h2>Login</h2>
 
             <input type="text" id="username" placeholder="Username">
