@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Login PBO</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Login PBO</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="overlay"></div>
+  <div class="container">
+    <div class="hexagon">
+      <img src="assets/avatar.png" class="avatar">
 
-<div class="hex-login">
-    <img src="assets/avatar.png" class="avatar" alt="Avatar">
+      <h1 class="title">LOGIN</h1>
 
-    <h2>LOGIN</h2>
+      <input type="text" id="username" placeholder="username">
+      <input type="password" id="password" placeholder="password">
 
-    <input type="text" id="username" placeholder="USERNAME">
-    <input type="password" id="password" placeholder="PASSWORD">
+      <button onclick="login()">login</button>
 
-    <button onclick="login()">LOGIN</button>
+      <div id="alert-box" class="alert hidden"></div>
+    </div>
+  </div>
 
-    <div id="alert"></div>
-</div>
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
