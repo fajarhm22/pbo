@@ -1,104 +1,91 @@
-/* ===== FONT CRYPTO HUNTER ===== */
 @font-face {
-    font-family: 'CryptoHunter';
-    src: url('fonts/CryptoHunter.ttf') format('truetype');
+  font-family: CryptoHunter;
+  src: url("assets/CryptoHunter.ttf");
 }
 
-/* ===== RESET ===== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'CryptoHunter', sans-serif;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* ===== BACKGROUND ===== */
 body {
-    height: 100vh;
-    background: url('assets/bg.png') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0;
+  height: 100vh;
+  background: url("assets/bg.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-    z-index: 1;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* ===== HEXAGON LOGIN BOX ===== */
-.hex-login {
-    position: relative;
-    z-index: 2;
-    width: 360px;
-    padding: 60px 40px;
-    background: rgba(255,255,255,0.95);
-    clip-path: polygon(
-        25% 0%, 75% 0%,
-        100% 50%,
-        75% 100%, 25% 100%,
-        0% 50%
-    );
-    text-align: center;
-    box-shadow: 0 0 30px rgba(0,255,255,0.6);
+.hexagon {
+  width: 320px;
+  height: 360px;
+  background: white;
+  clip-path: polygon(
+    25% 6.7%, 75% 6.7%,
+    100% 50%,
+    75% 93.3%, 25% 93.3%,
+    0% 50%
+  );
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
 }
 
-/* ===== AVATAR ===== */
 .avatar {
-    width: 80px;
-    margin-bottom: 15px;
+  width: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
-/* ===== TEXT ===== */
-h2 {
-    margin-bottom: 20px;
-    letter-spacing: 3px;
+.title {
+  font-family: CryptoHunter;
+  margin-bottom: 20px;
 }
 
-/* ===== INPUT ===== */
 input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: none;
-    outline: none;
-    background: #111;
-    color: #0ff;
-    text-align: center;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  background: black;
+  color: white;
+  border: none;
+  text-align: center;
 }
 
-/* ===== BUTTON ===== */
 button {
-    margin-top: 15px;
-    padding: 12px;
-    width: 100%;
-    background: #0ff;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  background: cyan;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-button:hover {
-    background: #00cccc;
+.alert {
+  margin-top: 15px;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-/* ===== ALERT ===== */
-#alert {
-    margin-top: 15px;
-    padding: 10px;
-    display: none;
+.alert.error {
+  color: red;
 }
 
-.alert-error {
-    display: block;
-    background: white;
-    color: red;
+.alert.success {
+  color: green;
 }
 
-.alert-success {
-    display: block;
-    background: white;
-    color: green;
+.hidden {
+  display: none;
 }
