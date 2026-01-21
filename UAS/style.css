@@ -1,88 +1,104 @@
+/* ===== FONT CRYPTO HUNTER ===== */
+@font-face {
+    font-family: 'CryptoHunter';
+    src: url('fonts/CryptoHunter.ttf') format('truetype');
+}
+
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
+    font-family: 'CryptoHunter', sans-serif;
 }
 
+/* ===== BACKGROUND ===== */
 body {
     height: 100vh;
-    background: linear-gradient(90deg, #ff5757, #8c52ff);
+    background: url('assets/bg.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Kotak Login */
-.login-box {
-    width: 350px;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 18px;
-    text-align: center;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
 }
 
-/* Avatar */
-.login-box img {
-    width: 90px;
+/* ===== HEXAGON LOGIN BOX ===== */
+.hex-login {
+    position: relative;
+    z-index: 2;
+    width: 360px;
+    padding: 60px 40px;
+    background: rgba(255,255,255,0.95);
+    clip-path: polygon(
+        25% 0%, 75% 0%,
+        100% 50%,
+        75% 100%, 25% 100%,
+        0% 50%
+    );
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0,255,255,0.6);
+}
+
+/* ===== AVATAR ===== */
+.avatar {
+    width: 80px;
     margin-bottom: 15px;
 }
 
-/* Judul */
-.login-box h2 {
+/* ===== TEXT ===== */
+h2 {
     margin-bottom: 20px;
-    color: #333;
+    letter-spacing: 3px;
 }
 
-/* Input */
-.login-box input {
+/* ===== INPUT ===== */
+input {
     width: 100%;
     padding: 12px;
-    margin: 8px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    outline: none;
-}
-
-/* Button */
-.login-box button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 15px;
+    margin: 10px 0;
     border: none;
-    border-radius: 25px;
-    background: linear-gradient(90deg, #ff5757, #8c52ff);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+    outline: none;
+    background: #111;
+    color: #0ff;
+    text-align: center;
 }
 
-.login-box button:hover {
-    opacity: 0.9;
-}
-
-/* Alert Notifikasi */
-.alert {
+/* ===== BUTTON ===== */
+button {
     margin-top: 15px;
     padding: 12px;
-    border-radius: 8px;
-    background: #ffffff;
-    font-weight: bold;
+    width: 100%;
+    background: #0ff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #00cccc;
+}
+
+/* ===== ALERT ===== */
+#alert {
+    margin-top: 15px;
+    padding: 10px;
     display: none;
 }
 
-.alert.error {
-    color: #ff3b3b;
-    border: 1px solid #ff3b3b;
+.alert-error {
+    display: block;
+    background: white;
+    color: red;
 }
 
-.alert.success {
-    color: #2ecc71;
-    border: 1px solid #2ecc71;
-}
-
-/* Halaman User */
-.user-info button {
-    background: #ff5757;
+.alert-success {
+    display: block;
+    background: white;
+    color: green;
 }
