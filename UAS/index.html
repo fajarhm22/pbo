@@ -2,13 +2,26 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Web Login PBO</title>
+    <title>Login PBO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="app"></div>
+<div class="overlay"></div>
 
-    <script src="app.js"></script>
+<div class="hex-login">
+    <img src="assets/avatar.png.jpeg" class="avatar" alt="Avatar">
+
+    <h2>LOGIN</h2>
+
+    <input type="text" id="username" placeholder="USERNAME">
+    <input type="password" id="password" placeholder="PASSWORD">
+
+    <button onclick="login()">LOGIN</button>
+
+    <div id="alert"></div>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
