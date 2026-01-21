@@ -1,12 +1,27 @@
+/* ===============================
+   FONT CRYPTO HUNTER (LOGIN ONLY)
+================================= */
+@font-face {
+  font-family: "CryptoHunter";
+  src: url("assets/fonts/CryptoHunter.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ===============================
+   RESET & BASE
+================================= */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  margin: 0;
   min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
 
+  /* BACKGROUND KOTA */
   background-image: url("./assets/city.png");
   background-size: cover;
   background-position: center;
@@ -17,61 +32,115 @@ body {
   align-items: center;
 }
 
+/* ===============================
+   LOGIN BOX
+================================= */
 .login-box {
-  background: white;
-  padding: 30px;
-  width: 320px;
-  border-radius: 12px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  width: 360px;
+  padding: 30px 25px;
+  border-radius: 18px;
+
+  /* GRADIENT SIMETRIS */
+  background: linear-gradient(
+    135deg,
+    #ff57b9,
+    #a704fd,
+    #ff57b9
+  );
+  background-size: 200% 200%;
+  animation: gradientMove 6s ease infinite;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
   text-align: center;
 }
 
+/* ===============================
+   ANIMASI GRADIENT
+================================= */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ===============================
+   AVATAR
+================================= */
 .login-box img {
   width: 80px;
-  margin-bottom: 10px;
+  border-radius: 50%;
+  margin-bottom: 12px;
 }
 
-.login-box h2 {
-  margin-bottom: 20px;
+/* ===============================
+   JUDUL LOGIN (CRYPTO HUNTER)
+================================= */
+.login-title {
+  font-family: "CryptoHunter", sans-serif;
+  color: #ffffff;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
 }
 
+/* ===============================
+   INPUT FIELD
+================================= */
 .login-box input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
+/* ===============================
+   BUTTON
+================================= */
 .login-box button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
+  border-radius: 8px;
   border: none;
-  border-radius: 6px;
-  background: #4f46e5;
-  color: white;
-  font-weight: bold;
   cursor: pointer;
+
+  background: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .login-box button:hover {
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
+/* ===============================
+   ALERT NOTIFICATION
+================================= */
 #alert-box {
-  margin-top: 12px;
-  padding: 8px;
+  margin-top: 15px;
+  padding: 10px;
   border-radius: 6px;
+  background: #ffffff;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .error {
   color: red;
-  background: #fff;
 }
 
 .success {
   color: green;
-  background: #fff;
 }
 
