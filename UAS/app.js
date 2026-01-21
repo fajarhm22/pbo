@@ -57,7 +57,7 @@ class LoginApp {
 
         if (!found) {
             alertBox.className = "alert error";
-            alertBox.textContent = "Username dan password salah!";
+            alertBox.textContent = "Username atau Password salah!";
         } else {
             alertBox.className = "alert success";
             alertBox.textContent = "Login berhasil!";
