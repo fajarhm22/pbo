@@ -1,16 +1,18 @@
 function login() {
-    const user = document.getElementById("username").value;
-    const pass = document.getElementById("password").value;
-    const alertBox = document.getElementById("alert");
+  const username = document.getElementById("username").value.toLowerCase();
+  const password = document.getElementById("password").value.toLowerCase();
+  const alertBox = document.getElementById("alert-box");
 
-    const correctUser = "admin";
-    const correctPass = "12345";
+  const correctUser = "fajarhm";
+  const correctPass = "fajar2001";
 
-    if (user === correctUser && pass === correctPass) {
-        alertBox.className = "alert-success";
-        alertBox.innerText = "LOGIN BERHASIL!";
-    } else {
-        alertBox.className = "alert-error";
-        alertBox.innerText = "USERNAME DAN PASSWORD SALAH!";
-    }
+  alertBox.classList.remove("hidden", "error", "success");
+
+  if (username === correctUser && password === correctPass) {
+    alertBox.classList.add("success");
+    alertBox.innerText = "login berhasil! selamat datang fajar";
+  } else {
+    alertBox.classList.add("error");
+    alertBox.innerText = "username atau password salah!";
+  }
 }
