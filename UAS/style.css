@@ -2,83 +2,87 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Segoe UI", sans-serif;
 }
 
 body {
     height: 100vh;
-    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    background: linear-gradient(90deg, #ff5757, #8c52ff);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.login-card {
-    width: 320px;
+/* Kotak Login */
+.login-box {
+    width: 350px;
+    background: #ffffff;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
-    border-radius: 15px;
+    border-radius: 18px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    color: white;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
 }
 
-.avatar {
+/* Avatar */
+.login-box img {
     width: 90px;
     margin-bottom: 15px;
 }
 
-.login-card h2 {
+/* Judul */
+.login-box h2 {
     margin-bottom: 20px;
+    color: #333;
 }
 
-.login-card input {
+/* Input */
+.login-box input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 8px 0;
-    border: none;
     border-radius: 8px;
+    border: 1px solid #ccc;
     outline: none;
 }
 
-.login-card button {
+/* Button */
+.login-box button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 15px;
     border: none;
-    border-radius: 8px;
-    background: #ffffff;
-    color: #4e54c8;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #ff5757, #8c52ff);
+    color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.login-card button:hover {
-    background: #e0e0ff;
+.login-box button:hover {
+    opacity: 0.9;
 }
 
-/* ALERT */
-.alert-error {
-    background: white;
-    color: red;
-    padding: 8px;
-    border-radius: 6px;
-    margin-bottom: 10px;
+/* Alert Notifikasi */
+.alert {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #ffffff;
+    font-weight: bold;
+    display: none;
 }
 
-.alert-success {
-    background: white;
-    color: green;
-    padding: 8px;
-    border-radius: 6px;
-    margin-bottom: 10px;
+.alert.error {
+    color: #ff3b3b;
+    border: 1px solid #ff3b3b;
 }
 
+.alert.success {
+    color: #2ecc71;
+    border: 1px solid #2ecc71;
+}
+
+/* Halaman User */
+.user-info button {
+    background: #ff5757;
+}
