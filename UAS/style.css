@@ -11,7 +11,7 @@
 body {
   margin: 0;
   height: 100vh;
-  background: url("assets/bg.jpg") center/cover no-repeat;
+  background: url("assets/bg.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
