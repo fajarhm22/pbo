@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Web Login PBO</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Login PBO</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="app"></div>
+  <div class="login-box">
+    <img src="./assets/avatar.png" alt="avatar">
+    <h2>Login</h2>
 
-    <script src="app.js"></script>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <div id="alert-box"></div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
