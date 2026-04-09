@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Ratio Layout</title>
+  <style>
+    :root {
+      /* 60-30-10 Color Rule */
+      --primary: #1e293b;   /* 60% */
+      --secondary: #64748b; /* 30% */
+      --accent: #f59e0b;    /* 10% */
+      --text-light: #f8fafc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: var(--primary);
+      color: var(--text-light);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--secondary);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: var(--text-light);
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Golden Ratio Layout (1:1.618) */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1.618fr;
+      flex: 1;
+    }
+
+    aside {
+      background: var(--secondary);
+      padding: 2rem;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      border-left: 5px solid var(--accent);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--accent);
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: var(--secondary);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        order: 2;
+      }
+
+      main {
+        order: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My Website</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <aside>
+    <h2>Sidebar</h2>
+    <p>Ini area sidebar menggunakan rasio emas.</p>
+  </aside>
+
+  <main>
+    <div class="card">
+      <h2>Content Utama</h2>
+      <p>Layout ini menggunakan Golden Ratio (1 : 1.618) untuk kenyamanan visual.</p>
+      <a href="#" class="btn">Pelajari</a>
+    </div>
+
+    <div class="card">
+      <h2>Desain 60-30-10</h2>
+      <p>60% warna utama, 30% warna sekunder, dan 10% warna aksen.</p>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>© 2026 Fajar Project</p>
+</footer>
+
+</body>
+</html>
